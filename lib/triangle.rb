@@ -34,5 +34,6 @@ end
     def message
       puts "not a triangle"
     end
+  end
 
 end
