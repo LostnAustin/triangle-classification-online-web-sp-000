@@ -5,6 +5,23 @@ def initialize(side1, side2, side3)
   side_length.each {|key, value| self.send(("#{key}="), value)}
   end
 
+
+    def equilateral
+      if self.kind == ((side1 == side2) && (side2 == side3))
+      self.kind = equilateral
+    end
+
+    def scalene
+      if self.kind == ((side1 != side2) && (side2 != side3))
+      self.kind == scalene
+    end
+
+    def isosceles
+      if self.kind == ((side1 == side2) && (side1 != side3) || (side2 == side3) && (side2 != side1))
+      self.kind == isosceles
+    end
+
+
   def kind
     self.kind = (equilateral || isosceles || scalene)
 
@@ -13,20 +30,7 @@ def initialize(side1, side2, side3)
     end
 
 
-  def equilateral
-    if self.kind == ((side1 == side2) && (side2 == side3))
-      self.kind = equilateral
-    end
 
-  def scalene
-    if self.kind == ((side1 != side2) && (side2 != side3))
-      self.kind == scalene
-    end
-
-  def isosceles
-    if self.kind == ((side1 == side2) && (side1 != side3) || (side2 == side3) && (side2 != side1))
-      self.kind == isosceles
-    end
 
     if self.class != (equilateral || isosceles || scalene)
       begin
