@@ -2,7 +2,7 @@ class Triangle
  attr_accessor :kind, :equilateral, :isosceles, :scalene, :side1, :side2, :side3
 
 def initialize(side1, side2, side3)
-  side_length.each {|key, value| self.send(("#{key}="), value)}
+  #side_length.each {|key, value| self.send(("#{key}="), value)}
   end
 
     def side1
@@ -56,7 +56,7 @@ def initialize(side1, side2, side3)
         triangle.kind = self
         end
       end
-    
+
   end
 #  class TriangleError < StandardError
 #    puts "lsdfl;sd"
