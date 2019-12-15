@@ -1,10 +1,13 @@
 class Triangle
- attr_accessor :equilateral, :isosceles, :scalene
+ attr_accessor :side_length, :equilateral, :isosceles, :scalene
 
-  def initialize(attributes)
-   attributes.each {|key, value| self.send(("#{key}="), value)}
+  def initialize(side_length)
+  side_length.each {|key, value| self.send(("#{key}="), value)}
   end
 
+  def kind
+
+  end
 
   class TriangleError < StandardError
 
