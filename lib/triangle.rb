@@ -16,8 +16,13 @@ def initialize(side1, side2, side3)
     def side3
       @side3 = side3
 
+    def pass_tri_inequality(side1, side2, side3)
+      unless ((side1 + side2) < side3) || ((side2 + side3) < side1) || ((side1 + side3) < side2)
+        return true
+      end
+
     def equilateral
-      if self.kind == ((side1 == side2) && (side2 == side3)) && (side1 > 0 &&  side2 > 0 && side3 > 0)
+      if self.kind == ((side1 == side2) && (side2 == side3)) && pass_tri_inequality(side1, side2, side3)
       self.kind = equilateral
         end
       end
