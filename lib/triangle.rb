@@ -1,5 +1,5 @@
 class Triangle
- attr_accessor :kind, :equilateral, :isosceles, :scalene, :side1, :side2, :side3
+ attr_accessor :kind, :side1, :side2, :side3
 
 def initialize(side1, side2, side3)
   @side1 = side1
@@ -30,19 +30,5 @@ def initialize(side1, side2, side3)
   end
 end
 
-
-
-#      def scalene
-#        if self.kind == ((@side1 != @side2) && (@side2 != @side3))
-#        self.kind = :scalene
-#      end
-#    end
-
-
-
-
-#  class TriangleError < StandardError
-#    puts "lsdfl;sd"
-#  end
 
 end
