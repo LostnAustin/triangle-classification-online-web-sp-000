@@ -17,24 +17,24 @@ def initialize(side1, side2, side3)
       @side3 = side3
 
     def pass_tri_inequality(side1, side2, side3)
-      unless ((side1 + side2) < side3) || ((side2 + side3) < side1) || ((side1 + side3) < side2)
+      unless ((@side1 + @side2) < @side3) || ((@side2 + @side3) < @side1) || ((@side1 + @side3) < @side2)
         return true
       end
 
     def equilateral
-      if self.kind == ((side1 == side2) && (side2 == side3)) && pass_tri_inequality(side1, side2, side3)
+      if self.kind == ((@side1 == @side2) && (@side2 == @side3)) && pass_tri_inequality(side1, side2, side3)
       self.kind = equilateral
         end
       end
 
     def scalene
-      if self.kind == ((side1 != side2) && (side2 != side3))
+      if self.kind == ((@side1 != @side2) && (@side2 != @side3))
       self.kind == scalene
     end
   end
 
     def isosceles
-      if self.kind == ((side1 == side2) && (side1 != side3) || (side2 == side3) && (side2 != side1))
+      if self.kind == ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
       self.kind == isosceles
     end
   end
