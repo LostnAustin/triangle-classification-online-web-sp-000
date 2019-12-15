@@ -50,9 +50,9 @@ def initialize(side1, side2, side3)
       end
     else
         triangle.kind = self
-end
-  end
-
+        end
+      end
+    end
 #  class TriangleError < StandardError
 #    puts "lsdfl;sd"
 #  end
