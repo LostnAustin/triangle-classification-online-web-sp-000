@@ -38,7 +38,7 @@ def initialize(side1, side2, side3)
       self.kind == :isosceles
     end
 
-  else self.kind == :scalene
+   self.kind == :scalene
   end
 
 
