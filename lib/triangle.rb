@@ -34,7 +34,7 @@ def initialize(side1, side2, side3)
 
 
 
-    elsif self.kind == ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
+    elsif ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
       self.kind == :isosceles
 
 
