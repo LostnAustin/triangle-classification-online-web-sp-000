@@ -6,15 +6,15 @@ def initialize(side1, side2, side3)
   end
 
   def kind
-    self.triangle = (equilateral || isosceles || scalene)
-    if triangle.class != Triangle
+    self.kind = (equilateral || isosceles || scalene)
+    if self.class != (equilateral || isosceles || scalene)
       begin
         raise TriangleError
       rescue TriangleError => error
         puts error.message
       end
     else
-        .triangle = self
+        triangle.kind = self
 
   end
 
