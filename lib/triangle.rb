@@ -21,32 +21,32 @@ def initialize(side1, side2, side3)
     end
 
 
+    def kind
 
-    def pass_tri_inequality(side1, side2, side3)
-      unless ((@side1 + @side2) <= @side3) || ((@side2 + @side3) <= @side1) || ((@side1 + @side3) <= @side2) || (@side1 * @side2 * @side3) == 0
-        return true
+    if ((@side1 + @side2) <= @side3) || ((@side2 + @side3) <= @side1) || ((@side1 + @side3) <= @side2) || (@side1 * @side2 * @side3) == 0
+        begin
           raise TriangleError
+          puts error.message
       end
 
-    def equilateral
-      if (@side1 = @side2) && (@side2 = @side3) && pass_tri_inequality
+    elsif (@side1 = @side2) && (@side2 = @side3) && pass_tri_inequality
       self.kind = :equilateral
         end
       end
 
-    def scalene
-      if self.kind == ((@side1 != @side2) && (@side2 != @side3))
-      self.kind = :scalene
-    end
-  end
-
-    def isosceles
-      if self.kind == ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
+    elsif self.kind == ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
       self.kind == :isosceles
     end
   end
 
-  def kind
+  
+#      def scalene
+#        if self.kind == ((@side1 != @side2) && (@side2 != @side3))
+#        self.kind = :scalene
+#      end
+#    end
+
+
     self.kind = (equilateral || isosceles || scalene)
 
     if self.class != (equilateral || isosceles || scalene)
