@@ -27,7 +27,7 @@ def initialize(side1, side2, side3)
         begin
           raise TriangleError
           puts error.message
-
+        end
 
     elsif (@side1 = @side2) && (@side2 = @side3) && pass_tri_inequality
       self.kind = :equilateral
@@ -41,7 +41,7 @@ def initialize(side1, side2, side3)
    self.kind == :scalene
   end
 end
-end
+
 
 
 #      def scalene
