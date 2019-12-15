@@ -29,7 +29,7 @@ def initialize(side1, side2, side3)
    self.kind = :scalene
   end
 end
-
+end
 
 
 #      def scalene
