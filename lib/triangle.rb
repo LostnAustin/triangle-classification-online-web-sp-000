@@ -32,11 +32,13 @@ def initialize(side1, side2, side3)
     elsif (@side1 = @side2) && (@side2 = @side3) && pass_tri_inequality
       self.kind = :equilateral
         end
-      end
+
 
     elsif self.kind == ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
       self.kind == :isosceles
     end
+
+  else self.kind == :scalene
   end
 
 
@@ -47,18 +49,6 @@ def initialize(side1, side2, side3)
 #    end
 
 
-    self.kind = (equilateral || isosceles || scalene)
-
-    if self.class != (equilateral || isosceles || scalene)
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
-    else
-        triangle.kind = self
-        end
-      end
 
   end
 #  class TriangleError < StandardError
