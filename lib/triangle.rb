@@ -29,8 +29,8 @@ def initialize(side1, side2, side3)
       end
 
     def equilateral
-      if (@side1 = @side2) && (@side2 = @side3)
-      self.kind = equilateral
+      if (@side1 = @side2) && (@side2 = @side3) && pass_tri_inequality
+      self.kind = :equilateral
         end
       end
 
