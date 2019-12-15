@@ -15,10 +15,14 @@ def initialize(side1, side2, side3)
 
     def side3
       @side3 = side3
+    end
+
+
 
     def pass_tri_inequality(side1, side2, side3)
-      unless ((@side1 + @side2) < @side3) || ((@side2 + @side3) < @side1) || ((@side1 + @side3) < @side2)
+      unless ((@side1 + @side2) <= @side3) || ((@side2 + @side3) <= @side1) || ((@side1 + @side3) <= @side2)
         return true
+          raise TriangleError
       end
 
     def equilateral
@@ -52,7 +56,7 @@ def initialize(side1, side2, side3)
         triangle.kind = self
         end
       end
-    end
+    
   end
 #  class TriangleError < StandardError
 #    puts "lsdfl;sd"
