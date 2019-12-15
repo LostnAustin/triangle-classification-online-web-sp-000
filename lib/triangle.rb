@@ -7,13 +7,24 @@ def initialize(side1, side2, side3)
 
   def kind
     self.kind = (equilateral || isosceles || scalene)
-      if self.kind == ((side1 == side2) && (side2 == side3))
-        self.kind = equilateral
+
 
 
     end
 
 
+  def equilateral
+    if self.kind == ((side1 == side2) && (side2 == side3))
+      self.kind = equilateral
+    end
+
+  def scalene
+    if self.kind == ((side1 != side2) && (side2 != side3))
+      self.kind == scalene
+    end
+
+  def isosceles
+    if self.kind == ((side1 == side2) && (side1 != side3) || (side2 == side3) && (side2 != side1))
 
     if self.class != (equilateral || isosceles || scalene)
       begin
