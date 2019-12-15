@@ -9,18 +9,18 @@ def initialize(side1, side2, side3)
     def equilateral
       if self.kind == ((side1 == side2) && (side2 == side3))
       self.kind = equilateral
-    end
-
+        end
+      end
     def scalene
       if self.kind == ((side1 != side2) && (side2 != side3))
       self.kind == scalene
     end
-
+  end
     def isosceles
       if self.kind == ((side1 == side2) && (side1 != side3) || (side2 == side3) && (side2 != side1))
       self.kind == isosceles
     end
-
+  end
 
   def kind
     self.kind = (equilateral || isosceles || scalene)
