@@ -36,13 +36,13 @@ def initialize(side1, side2, side3)
 
     def scalene
       if self.kind == ((@side1 != @side2) && (@side2 != @side3))
-      self.kind == scalene
+      self.kind = :scalene
     end
   end
 
     def isosceles
       if self.kind == ((@side1 == @side2) && (@side1 != @side3) || (@side2 == @side3) && (@side2 != @side1))
-      self.kind == isosceles
+      self.kind == @isosceles
     end
   end
 
