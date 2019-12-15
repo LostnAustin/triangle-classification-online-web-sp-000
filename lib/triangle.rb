@@ -42,11 +42,6 @@ def initialize(side1, side2, side3)
   def kind
     self.kind = (equilateral || isosceles || scalene)
 
-
-
-
-
-
     if self.class != (equilateral || isosceles || scalene)
       begin
         raise TriangleError
@@ -61,6 +56,3 @@ def initialize(side1, side2, side3)
 #  class TriangleError < StandardError
 #    puts "lsdfl;sd"
 #  end
-
-
-end
