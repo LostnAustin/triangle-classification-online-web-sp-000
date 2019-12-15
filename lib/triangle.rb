@@ -23,7 +23,7 @@ def initialize(side1, side2, side3)
 
 
     def pass_tri_inequality(side1, side2, side3)
-      unless ((@side1 + @side2) <= @side3) || ((@side2 + @side3) <= @side1) || ((@side1 + @side3) <= @side2) || (@side1 * @side2 * @side3) = 0
+      unless ((@side1 + @side2) <= @side3) || ((@side2 + @side3) <= @side1) || ((@side1 + @side3) <= @side2) || (@side1 * @side2 * @side3) == 0
         return true
           raise TriangleError
       end
