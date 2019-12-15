@@ -9,10 +9,10 @@ def initialize(side1, side2, side3)
     self.kind = (equilateral || isosceles || scalene)
       if self.kind == ((side1 == side2) && (side2 == side3))
         self.kind = equilateral
-      elsif 
+      elsif
       end
     end
-        
+
 
 
     if self.class != (equilateral || isosceles || scalene)
