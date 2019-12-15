@@ -39,7 +39,7 @@ def initialize(side1, side2, side3)
     end
   end
 
-  
+
 #      def scalene
 #        if self.kind == ((@side1 != @side2) && (@side2 != @side3))
 #        self.kind = :scalene
