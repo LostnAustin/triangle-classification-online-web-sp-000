@@ -7,6 +7,10 @@ def initialize(side1, side2, side3)
 
   def kind
     self.kind = (equilateral || isosceles || scalene)
+      if self.kind == ((side1 == side2) && (side2 == side3))
+        self.kind = equilateral
+
+
     if self.class != (equilateral || isosceles || scalene)
       begin
         raise TriangleError
