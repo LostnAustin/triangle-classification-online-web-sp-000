@@ -23,18 +23,18 @@ def initialize(side1, side2, side3)
 
     def kind
 
-    if ((@side1 + @side2) <= @side3) || ((@side2 + @side3) <= @side1) || ((@side1 + @side3) <= @side2) || (@side1 * @side2 * @side3) == 0
+    if ((side1 + side2) <= side3) || ((side2 + side3) <= side1) || ((side1 + side3) <= side2) || (side1 * side2 * side3) == 0
         begin
           raise TriangleError
           puts error.message
         end
 
-    elsif (@side1 == @side2) && (@side1 == @side3)
+    elsif (side1 == side2) && (side1 == side3)
       self.kind = :equilateral
 
 
 
-    elsif (@side1 == @side2)|| (@side1 == @side3) || (@side2 == @side3)
+    elsif (side1 == side2)|| (side1 == side3) || (side2 == side3)
       self.kind = :isosceles
 
 
