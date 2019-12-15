@@ -29,7 +29,7 @@ def initialize(side1, side2, side3)
       end
 
     def equilateral
-      if self.kind == ((@side1 == @side2) && (@side2 == @side3)) && pass_tri_inequality(side1, side2, side3)
+      if side1 == side2 == side3
       self.kind = equilateral
         end
       end
